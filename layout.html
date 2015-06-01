@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>选呗 - [页面]</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/metro.css" rel="stylesheet" />
+    <link href="css/metro-icons.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metro.min.js"></script>
+</head>
+<body>
+    <!-- 顶栏（未登录状态） -->
+    <div class="app-bar" data-role="appbar">
+        <a class="app-bar-element" href="/">选呗</a>
+        <span class="app-bar-divider"></span>
+        <a class="app-bar-element place-right fg-white" href="/register">注册</a>
+        <div class="app-bar-element place-right">
+            <a class="dropdown-toggle fg-white"><span class="mif-enter"></span> 登录</a>
+            <div class="app-bar-drop-container bg-white fg-dark place-right"
+                 data-role="dropdown" data-no-close="true">
+                <div class="padding20">
+                    <form>
+                        <h4 class="text-light">登录选呗</h4>
+                        <div class="input-control text">
+                            <span class="mif-user prepend-icon"></span>
+                            <input type="text" name="username">
+                        </div>
+                        <div class="input-control text">
+                            <span class="mif-lock prepend-icon"></span>
+                            <input type="password" name="password">
+                        </div>
+                        <label class="input-control checkbox small-check">
+                            <input type="checkbox" name="remember">
+                            <span class="check"></span>
+                            <span class="caption">自动登录</span>
+                        </label>
+                        <div class="form-actions">
+                            <button class="button" type="submit">登录</button>
+                            <a class="button link" href="/register">没有账号？</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主要内容 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                这里是宣传区域
+            </div>
+            <div class="col-md-4">
+                <p>这里是注册区域？</p>
+                <p><button class="btn btn-default">注册</button></p>
+            </div>
+        </div>
+        <div class="row">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h4 class="list-group-item-heading">项目标题</h4>
+                    <span class="list-group-item-text">项目描述</span>
+                </li>
+                <li class="list-group-item">
+                    <h4 class="list-group-item-heading">项目标题</h4>
+                    <span class="list-group-item-text">项目描述</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <nav class="navbar navbar-fixed-bottom navbar-inverse">
+        <span class="navbar-text">Copyright &copy; 2015 pkuse. All rights reserved.</span>
+    </nav>
+</body>
+</html>
