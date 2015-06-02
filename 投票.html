@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>选呗 - [页面]</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/metro.css" rel="stylesheet" />
+    <link href="css/metro-icons.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metro.min.js"></script>
+	    <script type="text/javascript">
+<!--		
+            function setImagePreview(docObj,localImagId,imgObjPreview)   
+            {  
+                if(docObj.files && docObj.files[0])  
+                {  
+                    //火狐下，直接设img属性  
+                    imgObjPreview.style.display = 'block';  
+                   // imgObjPreview.style.width = '1366px';  
+                    //imgObjPreview.style.height = '768px';                      
+      
+      
+                    //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式    
+                    imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);  
+                }  
+                else  
+                {  
+                    //IE下，使用滤镜  
+                    docObj.select();  
+                    var imgSrc = document.selection.createRange().text;  
+                      
+                    //必须设置初始大小  
+                    //localImagId.style.width = "1366px";  
+                    //localImagId.style.height = "768px";  
+                      
+                    //图片异常的捕捉，防止用户修改后缀来伪造图片  
+                    try  
+                    {  
+                        localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";  
+                        localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;  
+                     }  
+                     catch(e)  
+                     {  
+                        alert("您上传的图片格式不正确，请重新选择!");  
+                        return false;  
+                      }                            
+                      imgObjPreview.style.display = 'none';  
+                      document.selection.empty();  
+                }  
+                return true;  
+            }  
+			-->
+    </script>  
+</head>
+<body>
+    <!-- 顶栏（未登录状态） -->
+    <div class="app-bar" data-role="appbar">
+        <a class="app-bar-element" href="/">选呗</a>
+        <span class="app-bar-divider"></span>
+        <a class="app-bar-element place-right fg-white" href="/register">注册</a>
+        <div class="app-bar-element place-right">
+            <a class="dropdown-toggle fg-white"><span class="mif-enter"></span> 登录</a>
+            <div class="app-bar-drop-container bg-white fg-dark place-right"
+                 data-role="dropdown" data-no-close="true">
+                <div class="padding20">
+                    <form>
+                        <h4 class="text-light">登录选呗</h4>
+                        <div class="input-control text">
+                            <span class="mif-user prepend-icon"></span>
+                            <input type="text" name="username">
+                        </div>
+                        <div class="input-control text">
+                            <span class="mif-lock prepend-icon"></span>
+                            <input type="password" name="password">
+                        </div>
+                        <label class="input-control checkbox small-check">
+                            <input type="checkbox" name="remember">
+                            <span class="check"></span>
+                            <span class="caption">自动登录</span>
+                        </label>
+                        <div class="form-actions">
+                            <button class="button" type="submit">登录</button>
+                            <a class="button link" href="/register">没有账号？</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主要内容 -->
+	<div class="container">
+		<form action="javascript:alert('验证成功,可以提交.');" role="form">
+			<div class="form-group ">
+				<label for="title">发起的投票标题</label>
+					<input type="text" class="form-control " maxlength="30"  id="title" placeholder="Enter Title" required>
+			</div>
+			<div class="form-group">
+				<label for="description">投票的描述</label>
+				<textarea class="form-control" rows="5" id="description" placeholder="描述一下您的感受和情形吧" required></textarea>
+			</div>
+			<div class="row">
+				<div class="form-group col-md-6">
+				
+					<div class="form-group">
+					<label for="subtitle1">投票的选项1</label>
+						<input type="text" class="form-control" id="title" placeholder="第一个选项是什么呢" required>
+					</div>
+					<div class="form-group">
+						<label for="description1">投票的描述</label>
+						<textarea class="form-control" rows="2" id="description" placeholder="描述一下这个选项吧" ></textarea>
+					</div>
+					<a href="#"  class="thumbnail">
+						<label for="pic1" class="sr-only">上传选项1的图片</label>
+							<input type="file" id="pic1" onchange="javascript:setImagePreview(this,localImag1,preview1);" required>
+						<p class="help-block">上传并预览图片</p>
+						 <div id="localImag1" >  
+							<img id="preview1" alt="" class="img-thumbnail"/>  
+						</div> 
+					</a>
+				</div>
+				<div class="form-group col-md-6">
+					<div class="form-group">
+						<label for="subtitle2">投票的选项2</label>
+							<input type="text" class="form-control" id="title" placeholder="第二个选项是什么呢" required>
+					</div>
+					<div class="form-group">
+						<label for="description2">投票的描述</label>
+						<textarea class="form-control" rows="2" id="description" placeholder="描述一下这个选项吧"></textarea>
+					</div>
+					<a href="#" class="thumbnail">
+						<label for="pic2"class="sr-only">上传选项2的图片</label>
+							<input type="file" id="pic2"onchange="javascript:setImagePreview(this,localImag2,preview2);" required>
+						<p class="help-block">上传并预览图片</p>
+						 <div id="localImag2"  >  
+							<img id="preview2" class="img-thumbnail"alt="" />  
+						</div> 
+					</a>
+				</div>
+			</div>
+			</hr>
+			<div class="row" style="text-align: center">
+				<button type="submit" style="margin: auto" class="btn btn-default">Submit</button>
+			</div>
+
+		</form>
+	</div>
+   </br></br></br>
+    <!-- 页脚 -->
+    <nav class="navbar navbar-fixed-bottom navbar-inverse">
+        <span class="navbar-text">Copyright &copy; 2015 pkuse. All rights reserved.</span>
+    </nav>
+	
+	
+</body>
+</html>
