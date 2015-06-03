@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>选呗 - [页面]</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/metro.css" rel="stylesheet" />
+    <link href="css/metro-icons.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metro.min.js"></script>
+    <style type="text/css">
+    div#header {}
+    div#photo {border-style: solid;border-left-width: 120px; border-right-width: 120px;border-color:#E6E6F2;}
+    div#discription{height: 150px; background-color: #0080FF; 
+        border-style: solid;
+        border-top-width: 0px; border-left-width: 120px; border-right-width: 120px; 
+        border-color:#E6E6F2;
+        margin-top:0px; }
+    div#comment{border-style: solid;border-left-width: 120px; border-right-width: 120px;border-color:#E6E6F2;}
+    div#others{border-style: solid;border-left-width: 120px; border-right-width: 120px;border-color:#E6E6F2;}
+    p#result{}
+    div#vote{border-style: solid;border-left-width: 120px; border-right-width: 120px;border-color:#E6E6F2;}
+    div#comment{border-style: solid;border-left-width: 120px; border-right-width: 120px;border-color:#E6E6F2;
+        background-color: #E6E6F2;}
+    .id{}
+    .dis{}
+    .time{}
+    .Input_text {     
+    width: 485px;     
+    height: 111px;     
+    padding: 5px;     
+    outline: none;     
+    border: 0px solid #fff;     
+    resize: none;     
+    font: 13px "微软雅黑", Arial, Helvetica, sans-serif;     
+    -moz-border-radius: 5px;     
+    -webkit-border-radius: 5px;     
+    border-radius: 5px;     
+    }    
+    .postBtn {     
+    float: rightright;     
+    font: 13px "微软雅黑", Arial, Helvetica, sans-serif;     
+    color: #808080;     
+    padding: 9px 20px 7px 20px;        
+    }      
+    .postBtn:hover {     
+    color: #333;     
+    background-color: #efefef;     
+    }     
+    .postBtn:active {     
+    padding: 10px 20px 6px 20px;     
+    }               
+    </style>
+    <script>
+        function morecomment()
+        {
+            for(var i=0; i<8; i++)
+            {
+                var x="用户ID</br>"+"这里是新的评论</br>"+"时间</br>";
+                document.getElementById("comment").innerHTML=document.getElementById("comment").innerHTML+x;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- 主要内容 -->
+    <div id="discription">
+        <p class="id">用户ID</p>
+        <p class="dis">描述</p>
+        <p class="time">时间</p>
+    </div> 
+    <div id="photo">
+        <table>
+            <tr>
+                <td> <img src="first.jpg" alt="first image"> </td>
+                <td> <img src="second.jpg" alt="second image"> </td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+            </tr>
+        </table>
+        <p id="result">
+            投票结果
+        </p>
+    </div>
+
+    <div id="others">
+    <p id="comment"></p>
+    <button onclick="morecomment()">更多评论</button>
+    </div>
+
+    <div id="vote">
+        <div>
+            <form action="vote_result.sap" method="get">
+                <input name="vote" type="radio" value="A" />A
+                <input name="vote" type="radio" value="B" />B</br>
+                <input type="submit" vlue="Submit"/></br>
+            </form>
+        </div>
+    </div>
+    <div id="comment" >       
+            <textarea class="Input_text">说些什么吧...</textarea>        
+            <div class="Input_Foot"> 
+                <a class="postBtn">确定</a> 
+            </div>     
+    </div>
+    <!-- 页脚 -->
+    <nav class="navbar navbar-fixed-bottom navbar-inverse">
+        <span class="navbar-text">Copyright &copy; 2015 pkuse. All rights reserved.</span>
+    </nav>
+</body>
+</html>
