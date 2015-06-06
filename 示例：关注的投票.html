@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html lang="zh-CN">
+<head>
+    <meta charset="GB2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>选呗 - [页面]</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/metro.css" rel="stylesheet" />
+    <link href="css/metro-icons.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/metro.min.js"></script>
+</head>
+<body>
+    <!-- 顶栏（未登录状态） -->
+    <div class="app-bar" data-role="appbar">
+        <a class="app-bar-element" href="/">选呗</a>
+        <span class="app-bar-divider"></span>
+        <a class="app-bar-element place-right fg-white" href="/register">注册</a>
+        <div class="app-bar-element place-right">
+            <a class="dropdown-toggle fg-white"><span class="mif-enter"></span> 登录</a>
+            <div class="app-bar-drop-container bg-white fg-dark place-right"
+                 data-role="dropdown" data-no-close="true">
+                <div class="padding20">
+                    <form>
+                        <h4 class="text-light">登录选呗</h4>
+                        <div class="input-control text">
+                            <span class="mif-user prepend-icon"></span>
+                            <input type="text" name="username">
+                        </div>
+                        <div class="input-control text">
+                            <span class="mif-lock prepend-icon"></span>
+                            <input type="password" name="password">
+                        </div>
+                        <label class="input-control checkbox small-check">
+                            <input type="checkbox" name="remember">
+                            <span class="check"></span>
+                            <span class="caption">自动登录</span>
+                        </label>
+                        <div class="form-actions">
+                            <button class="button" type="submit">登录</button>
+                            <a class="button link" href="/register">没有账号？</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+	<div class="row">
+		<!-- 只有电脑版上才能看见哦 -->
+		<div class ="col-md-3 col-lg-3 hidden-xs col-sm-3">
+			</br></br>
+			<div align ="center"><img  style="width:50%"id="head" class="img-thumbnail"alt="" src="2.png"/></div> 
+			<p  style="text-align: center">我吃西红柿 的个人主页</p>
+			<ul class="nav nav-list " style="text-align: center ">
+			  <!--以下的链接因为是电脑版的，所以指向与本页面类似的页面比如关注的投票.html-->
+			  <li style="border-top: 1px solid #ddd"><a href="个人主页手机版.html"><p>个人信息</p></a></li>
+			  <li class="active"><a href="#"><p><strong>关注的投票</strong></p></a></li>	
+			  <li><a href="#"><p>参与的投票</p></a></li>
+			  <li><a href="#"><p>发布的投票</p></a></li>
+			</ul>
+		</div>
+		<!--手机和电脑上都可以看见哦-->
+		<div class="col-md-9 col-lg-9 col-xs-12 col-sm-9">
+			</br>
+			<div class="container">
+				
+				<!--页面的！真正内容~在此-->
+				<h2>关注的投票</h2>
+				<p></p>
+				<a class="hidden-lg hidden-md"href="个人主页同时也是个人信息页的电脑版.html"><p>这个是手机版才会有的按钮让人可以返回主页，只要有class内的信息即可，版式自由</p></a>
+			
+</div>
+		</div>
+	</div>
+
+	
+   </br></br></br>
+    <!-- 页脚 -->
+    <nav class="navbar navbar-fixed-bottom navbar-inverse">
+        <span class="navbar-text">Copyright &copy; 2015 pkuse. All rights reserved.</span>
+    </nav>
+	
+	
+</body>
+</html>
